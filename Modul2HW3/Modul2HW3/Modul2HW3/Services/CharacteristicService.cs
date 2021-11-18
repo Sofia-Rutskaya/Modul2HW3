@@ -8,13 +8,13 @@ using Modul2HW3.Services.Abstractions;
 
 namespace Modul2HW3.Services
 {
-    public class WeightService : UIService
+    public class CharacteristicService : UIService
     {
         private readonly Sweets[] _present;
         private IPresentService _presents;
         private double _weigh;
 
-        public WeightService()
+        public CharacteristicService()
         {
             _presents = PresentService.Instance;
             _present = _presents.GetPresent();

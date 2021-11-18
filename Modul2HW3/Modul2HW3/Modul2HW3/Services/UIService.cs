@@ -30,7 +30,7 @@ namespace Modul2HW3.Services
                 message = "Candy is in the present";
             }
 
-            Console.WriteLine($"Weight of present: {new WeightService().GetWeight()}, Found candy: {message}");
+            Console.WriteLine($"Weight of present: {new CharacteristicService().GetWeight()}, Found candy: {message}");
         }
     }
 }
