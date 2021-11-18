@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modul2HW3.Services.Abstractions;
 
 namespace Modul2HW3.Services
 {
-    public class UIService
+    public class UIService : IUI
     {
         private PresentService _presentService = PresentService.Instance;
 
@@ -15,12 +16,10 @@ namespace Modul2HW3.Services
             return 0;
         }
 
-        public void Info(string name, double price, double weigh)
+        void IUI.Info(string name, double price, double weigh)
         {
             var message = string.Empty;
 
-            _presentService.SetPresent();
-            _presentService.Sort();
             var candy = _presentService.FindSweet(name, price, weigh);
             if (candy == null)
             {

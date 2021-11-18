@@ -10,16 +10,20 @@ namespace Modul2HW3
 {
     public class Starter
     {
-        private readonly UIService _uIService;
+        private readonly IUI _iui;
+        private PresentService _presentService = PresentService.Instance;
 
         public Starter()
         {
-            _uIService = new UIService();
+            _iui = new UIService();
         }
 
         public void Run()
         {
-            _uIService.Info("Jam", 15, 20);
+            _presentService.SetPresent();
+            _presentService.Sort();
+            _iui.Info("Caramel", 17.2, 28.73);
+            _iui.Info("Caramel", 15, 23);
         }
     }
 }

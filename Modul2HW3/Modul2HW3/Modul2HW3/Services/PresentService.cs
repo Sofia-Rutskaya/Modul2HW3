@@ -12,7 +12,7 @@ namespace Modul2HW3.Services
     {
         private readonly ConfigService _config = ConfigService.Instance;
         private static readonly PresentService _instance = new PresentService();
-        private object _sweet;
+        private readonly object _sweet;
         private Sweets[] _present;
 
         static PresentService()
@@ -75,13 +75,23 @@ namespace Modul2HW3.Services
             });
             Add(new Caramel()
             {
-                Name = "Paste",
+                Name = "Caramel",
                 Price = 17.2,
                 Weigh = 28.73,
                 PercentOfSugar = 73,
                 PercentageOfHardness = 95,
                 Filling = true,
                 PlacedOnAStick = false
+            });
+            Add(new Cookies()
+            {
+                Name = "Cookie",
+                Price = 26.9,
+                Weigh = 37.3,
+                OvenTemperature = 180,
+                PercentOfFlour = 85,
+                TypeOfBiscuits = TypeOfBiscuits.AlmondAndNut,
+                Type = TypeOfFlour.Wheat
             });
         }
 
