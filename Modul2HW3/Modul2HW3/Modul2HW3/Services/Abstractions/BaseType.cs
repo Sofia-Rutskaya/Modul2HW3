@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Modul2HW3.Models
 {
-    public abstract class SolidSugarySweets : SugarySweets
+    public enum BaseType
     {
-        public int PercentageOfHardness { get; set; }
+        Cherry,
+        BlackCurrant,
+        Apricot,
+        Apple,
+        Strawberry
     }
 }

@@ -48,7 +48,7 @@ namespace Modul2HW3.Services
             {
                 Name = "ks",
                 Price = 15,
-                Weigh = 20,
+                Weigh = 20.7,
                 PiecesOfFruit = true,
                 Base = BaseType.Apple,
                 PercentOfSugar = 68,
@@ -56,23 +56,32 @@ namespace Modul2HW3.Services
             });
             Add(new Jam()
             {
-                Name = "Lam",
-                Price = 25,
-                Weigh = 15,
+                Name = "Jam",
+                Price = 15,
+                Weigh = 20,
                 Base = BaseType.Cherry,
                 DryMatterConcentration = 60,
                 NumberOfBrewingProcesses = 5,
                 PercentOfSugar = 80
             });
-            Add(new Jelly()
+            Add(new Paste()
             {
-                Name = "OGGus",
-                Price = 20,
-                Weigh = 40,
-                PiecesOfFruit = false,
+                Name = "Paste",
+                Price = 24.5,
+                Weigh = 26.4,
                 Base = BaseType.BlackCurrant,
-                PercentOfSugar = 64,
-                NumberOfBrewingProcesses = 1
+                PercentOfSugar = 65,
+                PercentageOfHardness = 78
+            });
+            Add(new Caramel()
+            {
+                Name = "Paste",
+                Price = 17.2,
+                Weigh = 28.73,
+                PercentOfSugar = 73,
+                PercentageOfHardness = 95,
+                Filling = true,
+                PlacedOnAStick = false
             });
         }
 

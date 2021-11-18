@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Modul2HW3.Models
 {
-    public abstract class SolidSugarySweets : SugarySweets
+    public enum TypeOfBiscuits
     {
-        public int PercentageOfHardness { get; set; }
+        Shortbread,
+        Whipped,
+        AlmondAndNut,
+        Cracker
     }
 }

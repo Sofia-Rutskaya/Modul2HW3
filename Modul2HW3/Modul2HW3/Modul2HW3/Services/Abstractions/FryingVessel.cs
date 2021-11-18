@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Modul2HW3.Models
 {
-    public enum BaseType
+    public enum FryingVessel
     {
-        Cherry,
-        BlackCurrant,
-        Apricot,
-        Apple
+        Deepfryer,
+        SmallPot,
+        Kettle
     }
 }

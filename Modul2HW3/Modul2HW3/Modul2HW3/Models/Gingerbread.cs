@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Modul2HW3.Models
 {
-    public abstract class SolidSugarySweets : SugarySweets
+    public class Gingerbread : Baked
     {
-        public int PercentageOfHardness { get; set; }
+        public bool DecoratedWithAPattern { get; set; }
     }
 }
