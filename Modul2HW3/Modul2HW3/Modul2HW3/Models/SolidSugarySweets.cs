@@ -8,5 +8,7 @@ namespace Modul2HW3.Models
 {
     public abstract class SolidSugarySweets : SugarySweets
     {
+        public bool HaveStuffing { get; set; }
+        public bool PlacedOnAStick { get; set; }
     }
 }

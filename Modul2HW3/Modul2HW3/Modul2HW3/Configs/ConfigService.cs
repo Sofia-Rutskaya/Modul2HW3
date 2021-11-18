@@ -22,12 +22,17 @@ namespace Modul2HW3.Services
 
         public static ConfigService Instance => _instance;
 
-        private Config GetConfig()
+        public Config GetConfig()
         {
             return new Config
             {
                 SizeOfPresent = 10
             };
+        }
+
+        public int GetSizeOfPresent()
+        {
+            return GetConfig().SizeOfPresent;
         }
     }
 }

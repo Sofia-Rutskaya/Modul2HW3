@@ -8,6 +8,6 @@ namespace Modul2HW3.Services.Abstractions
 {
     public interface IComparer
     {
-        void Sort(object o1, object o2);
+        public int Compare(object x, object y);
     }
 }
