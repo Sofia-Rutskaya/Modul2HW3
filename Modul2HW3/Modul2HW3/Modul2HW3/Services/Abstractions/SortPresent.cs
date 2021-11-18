@@ -11,10 +11,12 @@ namespace Modul2HW3.Services.Abstractions
     public class SortPresent : IComparer<Sweets>
     {
         private Sweets[] _present;
+        private IPresentService _presents;
 
         public SortPresent()
         {
-            _present = PresentService.Instance.GetPresent();
+            _presents = PresentService.Instance;
+            _present = _presents.GetPresent();
         }
 
         public int Compare(Sweets x, Sweets y)

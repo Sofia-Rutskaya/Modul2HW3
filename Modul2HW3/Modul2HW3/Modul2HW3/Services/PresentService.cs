@@ -8,7 +8,7 @@ using Modul2HW3.Services.Abstractions;
 
 namespace Modul2HW3.Services
 {
-    public class PresentService
+    public class PresentService : IPresentService
     {
         private readonly ConfigService _config = ConfigService.Instance;
         private static readonly PresentService _instance = new PresentService();
@@ -27,22 +27,22 @@ namespace Modul2HW3.Services
 
         public static PresentService Instance => _instance;
 
-        public Sweets[] GetPresent()
+        Sweets[] IPresentService.GetPresent()
         {
             return _present;
         }
 
-        public void Sort()
+        void IPresentService.Sort()
         {
             Array.Sort(_present, new SortPresent());
         }
 
-        public object FindSweet(string name, double price, double weigh)
+        object IPresentService.FindSweet(string name, double price, double weigh)
         {
             return SearchSweet.FindSweet(name, price, weigh, _present);
         }
 
-        public void SetPresent()
+        void IPresentService.SetPresent()
         {
             Add(new Jelly()
             {

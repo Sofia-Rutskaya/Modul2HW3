@@ -9,7 +9,7 @@ namespace Modul2HW3.Services
 {
     public class UIService : IUI
     {
-        private PresentService _presentService = PresentService.Instance;
+        private IPresentService _ipresentService = PresentService.Instance;
 
         public virtual double GetWeight()
         {
@@ -20,7 +20,7 @@ namespace Modul2HW3.Services
         {
             var message = string.Empty;
 
-            var candy = _presentService.FindSweet(name, price, weigh);
+            var candy = _ipresentService.FindSweet(name, price, weigh);
             if (candy == null)
             {
                 message = "Candy not found";

@@ -11,11 +11,13 @@ namespace Modul2HW3.Services
     public class WeightService : UIService
     {
         private readonly Sweets[] _present;
+        private IPresentService _presents;
         private double _weigh;
 
         public WeightService()
         {
-            _present = PresentService.Instance.GetPresent();
+            _presents = PresentService.Instance;
+            _present = _presents.GetPresent();
         }
 
         public override double GetWeight()
