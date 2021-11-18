@@ -37,6 +37,11 @@ namespace Modul2HW3.Services
             Array.Sort(_present, new SortPresent());
         }
 
+        public object FindSweet(string name, double price, double weigh)
+        {
+            return SearchSweet.FindSweet(name, price, weigh, _present);
+        }
+
         public void SetPresent()
         {
             Add(new Jelly()
@@ -69,9 +74,6 @@ namespace Modul2HW3.Services
                 PercentOfSugar = 64,
                 NumberOfBrewingProcesses = 1
             });
-
-            _sweet = SearchSweet.FindSweet("Lam", 15, 21, _present);
-            _sweet = SearchSweet.FindSweet("Lam", 25, 15, _present);
         }
 
         private void Add(Sweets sweets)
